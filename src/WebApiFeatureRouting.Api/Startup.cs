@@ -9,7 +9,10 @@ namespace WebApiFeatureRouting.Api
         public void Configuration(IAppBuilder appBuilder)
         {
             HttpConfiguration httpConfiguration = new HttpConfiguration();
+
             WebApi.Configure(httpConfiguration);
+            Swagger.Configure(httpConfiguration);
+
             appBuilder.UseWebApi(httpConfiguration);
         }
     }
